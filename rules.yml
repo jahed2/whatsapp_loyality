@@ -1,0 +1,46 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+- rule: first part
+  steps:
+  - intent: one1
+  - action: utter_one
+  - action: utter_like
+- rule: second part
+  steps:
+  - intent: Add
+  - action: utter_add
+- rule: third part
+  steps:
+  - intent: receipt
+  - action: utter_receipt
+- rule: four part
+  steps:
+  - intent: ok
+  - action: utter_ok
+- rule: five part
+  steps: 
+  - intent: point
+  - action: utter_point
+- rule: six part
+  steps:
+  - intent: ask
+  - action: utter_ask
+- rule: seven part
+  steps:
+  - intent: feedback
+  - action: utter_feedback
+- rule: eight part
+  steps:
+  - intent: thanks
+  - action: utter_thanks
