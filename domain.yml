@@ -1,0 +1,75 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - one
+  - two
+  - one1
+  - Redeem
+  - Add
+  - More options
+  - ok
+  - receipt
+
+responses:
+  utter_greet:
+    # image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTldMv_AMx0XHjXzgSb0QXaFpOyPqTdBsnw8w&usqp=CAU"
+  - text: "Hey there! Welcome to Savona\n\n1:customer\n\n2:merchant"
+    buttons: 
+      - title: "1"
+        payload: "/one"
+      - title: "2"
+        payload: "/two"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_1:
+  - text: "Welcome back, marc.\n\nyou can reply with the number associated with a place previously registered.\n\nreply one for Tango Udenhout,or\n\nalternatively reply scan to add a new place or exit to stop."
+  utter_2:
+  - text: "Welcome back, marc.\n\nyou can reply with the number associated with a place previously registered.\n\nreply 1 for Tango Udenhout,or\n\nalternatively reply scan to add a new place or exit to stop"
+  utter_one:
+  - text: "You have checked into Tango Udenhout.\n\nyour point balance is **70** "
+  utter_like:
+  - text: "what would you like to do?\n\n1:Redeem\n\n2:Add\n\n3:More options"
+
+  utter_add:
+  - text: "Lets do this take a picture of your recipt"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTldMv_AMx0XHjXzgSb0QXaFpOyPqTdBsnw8w&usqp=CAU"
+  utter_receipt:
+  - text: "We will now process your receipt.\n\ncheque if your reciept was uploaded\n\nsuccessfully by replying, ok"
+  utter_ok:
+  - text: "OK great,We have all the information we\n\n need from your TANGO UDENHOUT\n\nreceipt.We will now validate the\n\ninformation before adding your points"
+  utter_point:
+  - text: "74 points was added to your wallet.your\n\nnew balance is 144"
+  utter_ask:
+  - text: "what would you like to do?\n\n1:Redeem\n\n2:Add\n\n3:More options"
+  utter_more_options:
+  - text: "what would you like to do?\n\n1:rate our survice\n\n2:checkin to another place\n\n3:Go back\n\n4:exit"
+  utter_feedback:
+  - text: "We'd love to get your feedback for this promotion\n\n1:love your service\n\n2:service was good\n\n3:it was ok\n\n4:Dissapointing service\n\n5:Really upset"
+  utter_thanks:
+  - text: "Thank you our channel manager\n\n reviews all ratings and will get back to\n\n you if needed"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
